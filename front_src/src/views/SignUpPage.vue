@@ -46,7 +46,7 @@
         } catch(error){
           console.error(error);
           alert('Error signing up')
-        }``
+        }
       }
     },
     setup() {
