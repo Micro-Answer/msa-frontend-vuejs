@@ -1,6 +1,6 @@
 <template>
     <div class="login-wrapper">
-      <h2>Login</h2>
+      <h2>로그인</h2>
       <form id="login-form" @submit.prevent="login">
         <input v-model="userId" type="text" name="userId" placeholder="아이디">
         <input v-model="pw" type="password" name="userPassword" placeholder="비밀번호">
