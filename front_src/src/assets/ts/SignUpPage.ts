@@ -33,6 +33,14 @@ export default function userSignUp() {
         return isValidPassword.value ? "사용 가능한 비밀번호입니다" : "비밀번호를 올바르게 설정해주세요";
     })
 
+    const pwCheckCorrect = computed(() => {
+        return pw.value == pwCheck.value;
+    })
+
+    const pwCheckMessage = computed(() => {
+        return pwCheckCorrect.value ? "" : "비밀번호를 동일하게 입력해주세요." 
+    })
+
     const signUp = async () => {
         if(!isValidUserId.value) {
             alert("아이디를 올바르게 입력해주세요.");
@@ -71,6 +79,8 @@ export default function userSignUp() {
         userIdMessage,
         isValidPassword,
         userPwMessage,
+        pwCheckCorrect,
+        pwCheckMessage,
         signUp,
     };
 }

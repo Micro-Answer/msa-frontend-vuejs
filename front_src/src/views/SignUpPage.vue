@@ -10,7 +10,7 @@
         <input v-model="pw" class="password_input" type="password" name="userPassword" placeholder="비밀번호">
         <span class="pw_desc" :class="{valid: isValidPassword, invalid: !isValidPassword && pw.length > 0}">{{ userPwMessage }}</span>
         <input v-model="pwCheck" class="password_check" type="password" name="userPasswordCheck" placeholder="비밀번호 확인">
-        <span class="pw_check_desc">비밀번호를 다시 입력해주세요</span>
+        <span class="pw_check_desc" :class="{valid: pwCheckCorrect, invalid: !pwCheckCorrect && pwCheck.length > 0}">{{ pwCheckMessage }}</span>
         <select v-model="role">
           <option value="general">일반 회원</option>
           <option value="expert">전문가</option>
@@ -32,8 +32,8 @@ import userSignUp from "../assets/ts/SignUpPage";
   export default defineComponent({
     name: "SignUpPage",
     setup() {
-      const { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, signUp } = userSignUp();
-      return { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, signUp};
+      const { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, pwCheckCorrect, pwCheckMessage, signUp } = userSignUp();
+      return { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, pwCheckCorrect, pwCheckMessage, signUp};
     }
   });
 
