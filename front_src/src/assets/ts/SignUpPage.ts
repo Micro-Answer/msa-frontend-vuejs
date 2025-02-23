@@ -3,6 +3,7 @@ import {ref, computed} from "vue";
 export default function userSignUp() {
     const userId = ref("");
     const pw = ref("");
+    const pwCheck = ref("");
     const role = ref("");
 
     const isValidUserId = computed(() => {
@@ -15,7 +16,21 @@ export default function userSignUp() {
         if(userId.value.length == 0){
             return "4~12글자의 영문 소문자와 숫자를 모두 포함한 아이디를 입력해주세요";
         }
-        return isValidUserId.value ? "사용 가능한 아이디입니다" : "아이디는 4~12자의 영문과 숫자로 입력해주세요";
+        return isValidUserId.value ? "사용 가능한 아이디입니다" : "아이디는 4~12자의 영문과 숫자로 입력해주세요"; 
+    })
+
+    const isValidPassword = computed(() => {
+        const hasNumber = /\d/.test(pw.value);
+        const hasSpecial = /[@$!%*#?&]/.test(pw.value);
+        const isValidFormat = /^[A-Za-z0-9@$!%*#?&]+$/.test(pw.value);
+        return pw.value.length >= 8 && pw.value.length <= 20 && hasNumber && hasSpecial && isValidFormat;
+    })
+
+    const userPwMessage = computed(() => {
+        if(pw.value.length == 0){
+            return "8~20글자의 영문, 숫자, 특수문자를 모두 포함한 비밀번호를 입력해주세요";
+        }
+        return isValidPassword.value ? "사용 가능한 비밀번호입니다" : "비밀번호를 올바르게 설정해주세요";
     })
 
     const signUp = async () => {
@@ -50,9 +65,12 @@ export default function userSignUp() {
     return {
         userId,
         pw,
+        pwCheck,
         role,
         isValidUserId,
         userIdMessage,
+        isValidPassword,
+        userPwMessage,
         signUp,
     };
 }

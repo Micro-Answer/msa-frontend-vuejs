@@ -8,11 +8,13 @@
         </div>
         <span class="id_desc" :class="{valid: isValidUserId, invalid: !isValidUserId && userId.length > 0}">{{ userIdMessage }}</span>
         <input v-model="pw" class="password_input" type="password" name="userPassword" placeholder="비밀번호">
-        <span class="pw_desc">8~20글자의 영문, 숫자, 특수문자를 모두 포함한 비밀번호를 입력해주세요</span>
+        <span class="pw_desc" :class="{valid: isValidPassword, invalid: !isValidPassword && pw.length > 0}">{{ userPwMessage }}</span>
+        <input v-model="pwCheck" class="password_check" type="password" name="userPasswordCheck" placeholder="비밀번호 확인">
+        <span class="pw_check_desc">비밀번호를 다시 입력해주세요</span>
         <select v-model="role">
           <option value="general">일반 회원</option>
           <option value="expert">전문가</option>
-        </select>
+        </select> 
         <input type="submit" value="회원가입">
       </form>
     </div>
@@ -30,8 +32,8 @@ import userSignUp from "../assets/ts/SignUpPage";
   export default defineComponent({
     name: "SignUpPage",
     setup() {
-      const { userId, pw, role, isValidUserId, userIdMessage, signUp } = userSignUp();
-      return { userId, pw, role, isValidUserId, userIdMessage, signUp};
+      const { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, signUp } = userSignUp();
+      return { userId, pw, pwCheck, role, isValidUserId, userIdMessage, isValidPassword, userPwMessage, signUp};
     }
   });
 
