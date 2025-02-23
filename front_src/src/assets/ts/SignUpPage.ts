@@ -4,7 +4,7 @@ export default function userSignUp() {
     const userId = ref("");
     const pw = ref("");
     const pwCheck = ref("");
-    const role = ref("");
+    const role = ref("general");
 
     const isValidUserId = computed(() => {
         const hasNumber = /\d/.test(userId.value);
