@@ -46,9 +46,20 @@ export default function userSignUp() {
             alert("아이디를 올바르게 입력해주세요.");
             return;
         }
+        if(!isValidPassword.value) {
+            alert("비밀번호를 올바르게 입력해주세요.");
+            return;
+        }
+        if(!pwCheckCorrect.value) {
+            alert("비밀번호 확인이 일치하지 않습니다.");
+            return;
+        }
+
+        const apiUrl = role.value == "general"
+        ? "http://localhost:8081/api/v1/general/sign-up" : "http://localhost:8081/api/v1/expert/sign-up"; 
 
         try {
-            const response = await fetch("http://localhost:8081/api/v1/general/sign-up", {
+            const response = await fetch(apiUrl, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
@@ -59,14 +70,14 @@ export default function userSignUp() {
             });
       
             if (!response.ok) {
-                throw new Error("Sign up failed");
+                throw new Error("회원가입 실패하였습니다.\n아이디와 비밀번호를 다시 확인해주세요.");
             }
       
-            alert("Sign up successful");
+            alert("회원가입이 완료되었습니다!");
         }
         catch (error) {
             console.error(error);
-            alert("Error signing up");
+            alert("회원가입 중 오류가 발생했습니다.");
         }
     };
 
