@@ -1,17 +1,22 @@
 <template>
     <div id="Header">
-        <div class="logo">
-            <router-link to="/">Logo</router-link>
-        </div>
-        <div class="top_util">
-            <ul class="menu_list">
-                <li class="join">
-                    <router-link to="/signup">회원가입</router-link>
-                </li>
-                <li class="login">
-                    <router-link to="/login">로그인</router-link>
-                </li>
-            </ul>
+        <div class="header_box">
+            <div class="logo">
+                <router-link to="/">로고</router-link>
+            </div>
+            <div class="top_util">
+                <ul class="category">
+                    <li class="qna">질의응답</li>
+                </ul>
+                <ul class="member_list">
+                    <li class="join">
+                        <router-link to="/signup">회원가입</router-link>
+                    </li>
+                    <li class="login">
+                        <router-link to="/login">로그인</router-link>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
