@@ -6,7 +6,9 @@
             </div>
             <div class="top_util">
                 <ul class="category">
-                    <li class="qna">질의응답</li>
+                    <li class="qna">
+                        <router-link to="/qna">질의응답</router-link>
+                    </li>
                 </ul>
                 <ul class="member_list">
                     <li class="join">
