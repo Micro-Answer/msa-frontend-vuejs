@@ -12,18 +12,37 @@
 .qna_box {
     width: 1248px;
     height: 100%;
-    background-color: antiquewhite;
     display: flex;
 }
 
 .q_list {
-    width: 70%;
+    padding-top: 20px;
+    width: 75%;
     height: 100%;
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
 }
 
 .q_btn {
-    width: 30%;
+    width: 25%;
     height: 100%;
-    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+}
+
+.question_button {
+    margin-top: 50px;
+    background-color: #99A799;
+    border-radius: 20px;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_button p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
 }
