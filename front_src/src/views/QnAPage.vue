@@ -13,7 +13,7 @@
                 <QuestionViewComponent/>
             </div>
             <div class="q_btn">
-                <div class="question_button">
+                <div class="question_button" style="cursor: pointer;" @click="goToWriteQuestion">
                     <p>질문하기</p>
                 </div>
             </div>
@@ -25,14 +25,15 @@
 import {defineComponent} from "vue";
 import "../assets/css/QnAPage.css";
 import QuestionViewComponent from "@/components/QuestionViewComponent.vue";
+import useQnAPage from "@/assets/ts/QnAPage";
 
 export default defineComponent({
     name: "QnAPage",
     components: {
         QuestionViewComponent
     },
-    data() {
-        return{};
-    },
+    setup() {
+        return useQnAPage();
+    }
 });
 </script>

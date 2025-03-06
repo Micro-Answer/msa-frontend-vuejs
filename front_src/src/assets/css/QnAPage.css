@@ -54,6 +54,10 @@
     align-items: center;
 }
 
+.question_button:hover{
+    background-color: #818f81;
+}
+
 .question_button p {
     color: #ffffff;
     font-size: 20px;
