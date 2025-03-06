@@ -3,6 +3,14 @@
         <div class="qna_box">
             <div class="q_list">
                 <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
+                <QuestionViewComponent/>
             </div>
             <div class="q_btn">
                 <div class="question_button">

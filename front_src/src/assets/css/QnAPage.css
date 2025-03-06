@@ -18,10 +18,23 @@
 .q_list {
     padding-top: 20px;
     width: 75%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    max-height: 90vh;
+    overflow-y: auto;
 }
+
+.q_list::-webkit-scrollbar{
+    background-color: transparent;
+    width: 6px;
+}
+
+.q_list::-webkit-scrollbar-thumb{
+    background-color:#babac0;
+    border-radius:16px;
+}
+
+.q_list::-webkit-scrollbar-thumb:hover{
+    background-color:#a0a0a5;
+} 
 
 .q_btn {
     width: 25%;
