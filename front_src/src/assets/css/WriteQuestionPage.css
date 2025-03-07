@@ -1,0 +1,134 @@
+.write_div {
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+}
+
+.q_write_box {
+    width: 1248px;
+    height: 100%;
+    display: flex;
+}
+
+.write {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.write_box {
+    padding: 25px;
+    width: 85%;
+    height: 85%;
+    border: 2px solid #D3E4CD;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.write_box .title_text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.write_box .title_text::after {
+    content: "•";
+    color: #FF4800;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.write_box .title_input{
+    margin-top: 20px;
+    width: 95%;
+    height: 40px;
+    outline: 2px solid #D3E4CD;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.write_box .title_input:focus {
+    outline: 2px solid #a6b4a1;
+    border-radius: 25px;
+}
+
+.write_box .title_letters {
+    width: 98%;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.write_box .title_letters p {
+    font-size: 15px;
+    color: #858585
+}
+
+.write_box .content_text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.write_box .content_text::after {
+    content: "•";
+    color: #FF4800;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.write_box .content_input {
+    outline: 2px solid #D3E4CD;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-top: 20px;
+    width: 95%;
+    height: 600px;
+    text-align: left;
+    vertical-align: top;
+    resize: none;
+}
+
+.write_box .content_input:focus{
+    outline: 2px solid #a6b4a1;
+    border-radius: 25px;
+}
+
+.r_btn {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.regist_button {
+    margin-top: 50px;
+    background-color: #99A799;
+    border-radius: 20px;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regist_button:hover{
+    background-color: #818f81;
+}
+
+.regist_button p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
