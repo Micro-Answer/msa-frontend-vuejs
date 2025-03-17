@@ -4,6 +4,7 @@ import LoginPage from '@/views/LoginPage.vue'
 import SignUpPage from '@/views/SignUpPage.vue'
 import QnAPage from '@/views/QnAPage.vue'
 import WriteQuestionPage from '@/views/WriteQuestionPage.vue'
+import QuestionDetailViewPage from '@/views/QuestionDetailViewPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -30,6 +31,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/qna/write',
     name: 'WriteQuestion',
     component: WriteQuestionPage
+  },
+  {
+    path: '/qna/number',
+    name: 'QuestionDetailViewPage',
+    component: QuestionDetailViewPage
   }
 ]
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="q_block">
+    <div class="q_block" @click="goToDetailView">
         <div class="profile_box">
             <div class="profile_pic"></div>
             <div class="user_nickname">
@@ -17,9 +17,13 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import "../assets/css/QuestionViewComponent.css";
+import useQuestionView from "@/assets/ts/QuestionViewComponent";
 
 export default defineComponent({
     name: "QuestionViewComponent",
     components: {},
+    setup() {
+        return useQuestionView();
+    }
 })
 </script>
