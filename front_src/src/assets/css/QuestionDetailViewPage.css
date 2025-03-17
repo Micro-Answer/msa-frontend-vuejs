@@ -1,0 +1,94 @@
+.detail_content {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.qna_box {
+    width: 1248px;
+    height: 100%;
+    display: flex;
+}
+
+.q_box {
+    padding-top: 20px;
+    width: 75%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 30px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 25px;
+    color: #393939;
+}
+
+.posting_time {
+    margin-top: 10px;
+    color: #858585;
+}
+
+.profile_div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.profile_div .profile_pic {
+    width: 70px;
+    height: 70px;
+    background-color: gray;
+}
+
+.profile_div .user_nickname {
+    padding-left: 20px;
+}
+
+.profile_div .user_nickname p {
+    color: #393939;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.question .question_text {
+    text-align: left;
+    color: #626262;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.q_btn {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.question_button {
+    margin-top: 50px;
+    background-color: #99A799;
+    border-radius: 20px;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question_button:hover{
+    background-color: #818f81;
+}
+
+.question_button p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}

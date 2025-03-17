@@ -1,6 +1,6 @@
 <template>
-    <div class="q_block">
-        <div class="profile_box" @click="goToDetailView">
+    <div class="q_block" @click="goToDetailView">
+        <div class="profile_box">
             <div class="profile_pic"></div>
             <div class="user_nickname">
                 <p>유저 닉네임</p>

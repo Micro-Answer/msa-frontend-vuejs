@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.profile_pic {
+.profile_box .profile_pic {
     margin-left: 20px;
     margin-right: 10px;
     width: 70px;
@@ -23,14 +23,14 @@
     background-color: gray;
 }
 
-.user_nickname {
+.profile_box .user_nickname {
     width: 70%;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-.user_nickname p {
+.profile_box .user_nickname p {
     color: #393939;
     font-size: 17px;
     font-weight: bold;
