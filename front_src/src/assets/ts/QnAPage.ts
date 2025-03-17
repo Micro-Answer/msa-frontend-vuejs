@@ -7,5 +7,6 @@ export default function useQnAPage() {
         router.push("/qna/write");
     }
 
+
     return {goToWriteQuestion};
 }
