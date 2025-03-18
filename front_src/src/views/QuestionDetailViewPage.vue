@@ -33,8 +33,12 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import "../assets/css/QuestionDetailViewPage.css";
+import useDetailPage from "@/assets/ts/QuestionDetailViewPage";
 
 export default defineComponent({
-    name: "QuestionDetailViewPage"
+    name: "QuestionDetailViewPage",
+    setup() {
+        return useDetailPage();
+    }
 })
 </script>
