@@ -65,6 +65,49 @@
     font-size: 15px;
 }
 
+.comment_write {
+    height: 170px;
+    border: 1.5px solid #ADC2A9;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment_write .comment_write_area {
+    resize: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 95%;
+    height: 85px;
+}
+
+.comment_write .comment_write_area:focus {
+    outline: none;
+    border: none;
+}
+
+.comment_write .comment_button {
+    margin-left: auto;
+    margin-right: 25px;
+    width: 100px;
+    height: 40px;
+    background-color: #99A799;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment_write .comment_button:hover {
+    background-color: #818f81;
+}
+
+.comment_write .comment_button p {
+    color: #ffffff;
+    font-weight: bold;
+}
+
 .q_btn {
     width: 25%;
     height: 100%;
