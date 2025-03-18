@@ -18,8 +18,21 @@
                         테스트테스트테스트
                     </p>
                 </div>
-                <div class="comment_write"></div>
-                <div class="comment_list"></div>
+                <div class="comment_write">
+                    <textarea 
+                        class="comment_write_area"
+                        placeholder="답변을 작성해주세요!"></textarea>
+                    <div class="comment_button" style="cursor: pointer;">
+                        <p>답변하기</p>
+                    </div>
+                </div>
+                <div class="comment_list">
+                    <CommentComponent/>
+                    <CommentComponent/>
+                    <CommentComponent/>
+                    <CommentComponent/>
+                    <CommentComponent/>
+                </div>
             </div>
             <div class="q_btn">
                 <div class="question_button" style="cursor: pointer;" @click="goToWriteQuestion">
@@ -33,8 +46,14 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import "../assets/css/QuestionDetailViewPage.css";
+import useDetailPage from "@/assets/ts/QuestionDetailViewPage";
+import CommentComponent from "@/components/CommentComponent.vue";
 
 export default defineComponent({
-    name: "QuestionDetailViewPage"
+    name: "QuestionDetailViewPage",
+    components: {CommentComponent},
+    setup() {
+        return useDetailPage();
+    }
 })
 </script>
