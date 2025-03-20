@@ -1,0 +1,36 @@
+.tag-wrapper {
+    margin-left: 10px;
+    height: 20px;
+    border-radius: 25px;
+    display: flex;
+}
+
+.tag-wrapper p {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.tag-wrapper p::after{
+    display: none;
+}
+
+.tag-wrapper .hash-item {
+    display: flex;
+    background-color: #FEF5ED;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tag-wrapper .hash-item .hash-item-delete {
+    padding-left: 10px;
+}
+
+.tag-wrapper .input-tag{
+    width: auto;
+    margin-left: 10px;
+}
+
+.tag-wrapper .input-tag:focus {
+    outline: none;
+}

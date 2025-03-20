@@ -12,8 +12,13 @@
                         maxlength="80"
                     >
                     <div class="title_letters">
-                        <p>{{ title.length }} / 80</p>
+                        <span>{{ title.length }} / 100</span>
                     </div>
+                    <p class="hashtag_text">해시태그</p>
+                    <div class="hashtags">
+                        <HashtagComponent @updateHashtags="updateHashtags"/>
+                    </div>
+                    <div></div>
                     <p class="content_text">질문 내용</p>
                     <textarea 
                         type="text" 
@@ -35,12 +40,16 @@
 import {defineComponent, ref} from "vue";
 import "../assets/css/WriteQuestionPage.css"
 import writeQuestion from "@/assets/ts/WriteQuestionPage";
+import HashtagComponent from "@/components/HashtagComponent.vue";
 
 export default defineComponent({
     name: "WriteQuestionPage",
+    components: {
+        HashtagComponent
+    },
     setup() {
-        const {title, content, submit} = writeQuestion();
-        return {title, content, submit};
+        const {title, content, updateHashtags, submit} = writeQuestion();
+        return {title, content, updateHashtags, submit};
     }
 })
 </script>

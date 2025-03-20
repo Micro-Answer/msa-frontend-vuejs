@@ -56,7 +56,7 @@ export default function userSignUp() {
         }
 
         const apiUrl = role.value == "general"
-        ? "http://localhost:8081/api/v1/general/sign-up" : "http://localhost:8081/api/v1/expert/sign-up"; 
+        ? "http://localhost:8080/api/v1/general/sign-up" : "http://localhost:8080/api/v1/expert/sign-up"; 
 
         try {
             const response = await fetch(apiUrl, {
