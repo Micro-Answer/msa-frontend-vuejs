@@ -24,7 +24,7 @@
     methods: {
       async login() {
         try {
-          const response = await fetch('http://localhost:8081/api/v1/user/sign-in', {
+          const response = await fetch('http://localhost:8080/api/v1/user/sign-in', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -38,7 +38,7 @@
         } catch(error){
           console.error(error);
           alert('Error login')
-        }``
+        }
       }
     },
   });
