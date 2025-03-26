@@ -43,7 +43,7 @@ export default function writeQuestion() {
                 throw new Error("질문 작성을 실패하였습니다.\n질문 내용을 다시 확인해주세요.")
             }
 
-            alert("질문 작성이 완료되었습니다!");
+            alert("질문 작성이 완료되었습니다.");
         }
         catch (error) {
             console.error(error);
