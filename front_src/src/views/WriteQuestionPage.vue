@@ -9,7 +9,8 @@
                         class="title_input"
                         placeholder="제목을 입력해주세요"
                         v-model="title"
-                        maxlength="80"
+                        minlength="5"
+                        maxlength="100"
                     >
                     <div class="title_letters">
                         <span>{{ title.length }} / 100</span>
