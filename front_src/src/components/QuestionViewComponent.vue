@@ -3,13 +3,13 @@
         <div class="profile_box">
             <div class="profile_pic"></div>
             <div class="user_nickname">
-                <p>유저 닉네임</p>
+                <p>{{ question.nickname }}</p>
             </div>
         </div>
         <div class="content_box">
-            <p class="title">제목</p>
-            <p class="time">2025.03.05. 오후 3시 7분</p>
-            <p class="body">본문 내용</p>
+            <p class="title">{{ question.title }}</p>
+            <p class="time">{{ formattedDate }}</p>
+            <p class="body">{{ question.body }}</p>
         </div>
     </div>
 </template>
@@ -21,9 +21,14 @@ import useQuestionView from "@/assets/ts/QuestionViewComponent";
 
 export default defineComponent({
     name: "QuestionViewComponent",
-    components: {},
-    setup() {
-        return useQuestionView();
+    props: {
+        question: {
+            type: Object,
+            required: true
+        }
+    },
+    setup(props) {
+        return useQuestionView(props);
     }
 })
 </script>

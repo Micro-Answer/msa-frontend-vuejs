@@ -2,15 +2,11 @@
     <div class="content">
         <div class="qna_box">
             <div class="q_list">
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
-                <QuestionViewComponent/>
+                <QuestionViewComponent
+                    v-for="question in questions"
+                    :key="question.question_id"
+                    :question="question"
+                />
             </div>
             <div class="q_btn">
                 <div class="question_button" style="cursor: pointer;" @click="goToWriteQuestion">
@@ -33,7 +29,8 @@ export default defineComponent({
         QuestionViewComponent
     },
     setup() {
-        return useQnAPage();
+        const {questions, goToWriteQuestion} = useQnAPage();
+        return {questions, goToWriteQuestion};
     }
 });
 </script>
