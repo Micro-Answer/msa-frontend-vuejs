@@ -5,7 +5,7 @@
             v-for="(tag, index) in hashState.hashArr"
             :key="index"
             @click="removeTag(index)">
-            <p>{{ tag }}</p>
+            <p>#{{ tag }}</p>
             <p class="hash-item-delete">x</p>
         </div>
         <input 

@@ -10,9 +10,7 @@ export default function useHashtag(emit: (event: "updateHashtags", payload: stri
         let tag = hashState.hashtag.trim();
         
         if (tag) {
-            if (!tag.startsWith("#")) {
-                tag = `#${tag}`;
-            }
+            tag = tag.replace(/^#/, "");
 
             if (!hashState.hashArr.includes(tag) && hashState.hashArr.length < 5) {
                 hashState.hashArr.push(tag);
