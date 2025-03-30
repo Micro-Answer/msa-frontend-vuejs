@@ -6,13 +6,13 @@ export default function useQnAPage() {
     const router = useRouter();
     const questions = ref([]);
 
-    const category = ref("");
+    const category = ref("IT");
     const offset = ref(0);
     const limit = ref(12);
 
     const fetchQuestions = async () => {
         try {
-            const response = await axios.get("v1/api/rag/questions/titles", {
+            const response = await axios.get("/v1/api/rag/questions/titles", {
                 params: {category: category.value, offset: offset.value, limit: limit.value}
             });
             questions.value = response.data;
