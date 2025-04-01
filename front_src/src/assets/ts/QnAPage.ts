@@ -1,10 +1,11 @@
 import { useRouter } from "vue-router";
 import {ref, onMounted} from "vue";
 import axios from "axios";
+import {Question} from "@/api/Question"
 
 export default function useQnAPage() {
     const router = useRouter();
-    const questions = ref([]);
+    const questions = ref<Question[]>([]);
 
     const category = ref("IT");
     const offset = ref(0);
@@ -12,10 +13,18 @@ export default function useQnAPage() {
 
     const fetchQuestions = async () => {
         try {
-            const response = await axios.get("/v1/api/rag/questions/titles", {
+            const response = await axios.get<Question[]>("/v1/api/rag/questions/titles", {
                 params: {category: category.value, offset: offset.value, limit: limit.value}
             });
-            questions.value = response.data;
+
+            console.log("백엔드 응답: ", response.data);
+            questions.value = response.data.map((q:Question) => ({
+                questionId: q.questionId,
+                content: q.content,
+                title: q.title,
+                userId: q.userId,
+                createdAt: q.createdAt
+            }));
         }catch(error) {
             console.error("질문을 불러올 수 없습니다.", error);
         }
